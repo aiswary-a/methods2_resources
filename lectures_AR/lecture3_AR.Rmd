@@ -1,0 +1,84 @@
+---
+title: "Lecture Coding"
+author: "aiswary-a"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+### Lecture 2, Week 08 - DOES NOT WORK, Review!!  Function-making
+```{r}
+
+prob <- rnorm(20, mean = 12, sd = 1)
+prob_df <- data.frame(prob)
+
+library(tidyverse)
+
+prob_histo <- prob_df %>% 
+  ggplot(aes(x = prob)) +
+  geom_histogram(binwidth = 3)
+prob_histo
+
+
+x <- seq(from = -5, to = 5)
+
+f1 <- 1 / (1.0 * sqrt(2*pi)) * exp(-1)^(-(1/2)*((x-0.0)/1.0)^2)a
+f2 <- sqrt((1.0/2*pi))*exp(-1)^
+
+  
+# first chapter of methods 1, how to define your own functions
+  ## define variables on your own then imput them
+
+
+```
+
+
+### Lecture 3, Week 09 -- Simulations!
+#### Q1
+```{r}
+
+## measurement error, simulations!
+### 1) usinf a normal dist. w/ parameters of choice, sample 200 times 5 observations + plot the dist of the mean using a hist.
+
+#norm200 <- rnorm(200, mean = 0, sd = 3)
+#norm200_df <- data.frame(x = norm200)
+#### i dunno how to do this next part so i wait :,)
+
+for(i in 1:200) # so back to using for-loops! yay.
+```
+
+#### Q2
+``` {r}
+### 2) do the same bu this time using 50 observations each time
+
+```
+
+### Q3
+``` {r}
+### 3) which estimate is more reliable?
+
+
+
+```
+
+#### Q4
+```{r}
+
+# deterministic (=) vs. stochastic (~) 
+mu_z <- 5.0
+sigma_z <- 3.0
+alpha <- 1.5
+beta <- 2.0
+
+x ~ N(mu_z, (sigma_z)^2)
+
+y = alpha + beta * x # does not contain error term epsilon \thererfore will not accomaodate for noise.. which we do need so the plot won't look as nice right now..
+
+```
+
+

@@ -262,7 +262,7 @@ We need to record:
 Let's try and write a function:
 ```{r}
 # Function to simulate basketball player
-basketball <- function(){ # starting the function for you
+basketball <- function(p, x, y, z){ # starting the function for you
   
   # your code here
   

@@ -74,13 +74,13 @@ $$ O = \begin{pmatrix} -3 & 4 \\ 5 & -2 \end{pmatrix} $$
    $$ E = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} $$
 
 6. **Matrix 6 (4x4)**:  
-   $$ F = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 4 & 6 & 8 \\ 3 & 6 & 9 & 12 \\ 4 & 8 & 12 & 16 \end{pmatrix} $$
+   $$ F = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 4 & 6 & 8 \\ 3 & 6 & 9 & 12 \\ 4 & 8 & 12 & 16 \end{pmatrix}$$
 
 
 ## E. Vector dot product exercises
 The following exercises are designed to help you understand the properties of the vector dot product through practical examples. You are encouraged to compute these dot products manually and verify your results using R code.
 
-The dot product of two vectors $\mathbf{a}$ and $\mathbf{b}$, with dimensions $n$, is calculated as $\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} a_i b_i$.
+The dot product of two vectors $\mathbf{a}$ and $\mathbf{b}$, with dimensions $n$, is calculated as $$\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} a_i b_i$$ .
 
 #### Commutative Property
 The commutative property of the dot product states that $\mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a}$.

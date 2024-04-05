@@ -41,13 +41,61 @@ The rest from the lecture's last slide.
 
 # Extra about Bayesian, if you finish early (extra = optional!)
 ## Ex. 1: Load rstanarm()
+done!
 
 ## Ex. 2: Simulate data for a simple linear regression model, y = b0 + b1*X+e, where x is a predictor variable, y is the outcome, and e is the normally distributed error.
 
+```{r}
+
+set.seed(711) # for the sake of reproducibility
+
+# setting up the parameters for the simulation
+n <- 88 # no. of observations
+beta_0 <- 32
+beta_1 <- 14
+x <- runif(n, min = 0, max = 100)
+epsilon <-
+  rnorm(n, mean = 55, sd = 3) # creating normally distributed error
+
+y <-
+  (beta_0 + beta_1) * x + epsilon # y is outcome :)) now we just put it into an equation!
+y
+
+```
+
+
 ## Ex. 3: Fit a Bayesian linear regression model using stan_glm from the rstanarm package with default priors.
+
+```{r}
+
+# let's use stan_glm! from the rstanarm package :))
+
+regModel_Bayes <- stan_glm(y ~ x,
+                           data = data.frame(x, y), # values x and y coming from the previous chunk :))
+                           family = gaussian())
+
+```
 
 ## Ex. 4: Explain in a few sentences what a prior is (this is difficult stuff, so light level here is totally fine)
 
+#### using info. from the following site: https://mc-stan.org/rstanarm/articles/priors.html
+
+In general, with reference to Bayesian probability, the prior refers to the probability of something happening without given evidence / before we observe any (new) data. It is basically what our initial probability may be, perhaps on the basis of some expert information, previous studies, or otherwise.
+
+Bayesian stats. come in to help us 'update' these priors given new data -- or evidence (as it is referred to by Anderson in the Intro to CogSci textbook). Thus, we get a more informed understanding of the probability of a specific event.
+
+These priors can be either informative (if we have a lot of earlier knoweldge to build upon) -- but they can also be non-informative (if we don't have much to go off of).
+
+A lovely addition from Pernille's solutions:
+"We in particular use non-informative priors when we have reason to think a) previous studies are wrong in their measurements, or b) there are no previous studies with measurements that we can build on."
+
+In this context, however, with this function from the rstanarm package, I'm not exactly sure how it'd work.. what the different priors really represent..
+
 ## Ex. 5: Refit model using different priors for b0 and b1.
 
+```{r}
+
+## jeg ka' ik'
+
+```
 
